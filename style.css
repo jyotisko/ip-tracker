@@ -38,6 +38,10 @@ h1.title {
   font-weight: 500;
 }
 
+h1.title::selection {
+  background-color: rgba(0, 0, 0, 0.4)
+}
+
 .section-1__container .search__bar {
   height: 6vh;
   width: 100%;
@@ -69,6 +73,23 @@ h1.title {
   font-size: 2rem;
   cursor: pointer;
   background-color: #000000;
+}
+
+.search__bar .search-btn button:hover:after{
+  content: '';
+  animation: hoverAnimation 1s linear infinite;
+}
+
+@keyframes hoverAnimation {
+  from {
+    color: black;
+    content: '>';
+  }
+
+  to {
+    color: #ffffff;
+    content: '>>';
+  }
 }
 
 .results__container {
@@ -206,6 +227,7 @@ h3.result-text {
 
   .result {
     height: 10vh;
+    box-shadow: none;
   }
 
   .search__bar input {

@@ -12,6 +12,7 @@ class App {
   constructor() {
     this._getUserLocation();
     this.#map = '';
+
     // Event listeners
     searchBtn.addEventListener('click', this._getIP.bind(this))
   }
@@ -28,7 +29,7 @@ class App {
   }
 
   _loadMap(coords) {
-    this.#map = L.map('map');
+    this.#map = L.map('map', { zoomControl: false });
     this.#map.setView(coords, this.#zoomLevel);
     L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
