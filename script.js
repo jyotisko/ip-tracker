@@ -13,7 +13,6 @@ class App {
     this._getUserLocation();
     this.#map = '';
 
-    // Event listeners
     searchBtn.addEventListener('click', this._getIP.bind(this))
   }
 
