@@ -5,7 +5,9 @@
   --color-dark-gray: hsl(0, 0%, 59%);
 }
 
-* { 
+*,
+*::before,
+*::after { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -81,12 +83,12 @@ h1.title::selection {
 }
 
 @keyframes hoverAnimation {
-  from {
+  0% {
     color: black;
     content: '>';
   }
 
-  to {
+  100% {
     color: #ffffff;
     content: '>>';
   }
